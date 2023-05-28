@@ -44,9 +44,7 @@ execute:
 <h4>`r fontawesome::fa("twitter", "#233150")`   [\@mshin_77](https://twitter.com/mshin_77)     `r fontawesome::fa("home", "#233150")`   [mshin77.net](https://mshin77.net)</h4>
 
 ::: footer
-
 PERFECT-Basic, May 31, 2023
-
 :::
 
 ------------------------------------------------------------------------
@@ -74,8 +72,7 @@ Source: [Office of Elementary & Secondary Education](https://oese.ed.gov/resourc
 
 ## `Metaverse vs Cybersecurity Trends`
 
-![](figures/trend.png)
-Source: [Google Trend](https://trends.google.com/trends/explore?date=all&q=metaverse,cybersecurity&hl=en)
+![](figures/trend.png) Source: [Google Trend](https://trends.google.com/trends/explore?date=all&q=metaverse,cybersecurity&hl=en)
 
 ## `What is Metaverse?`
 
@@ -264,13 +261,11 @@ Source: [Forkast News](https://forkast.news/headlines/south-korea-metaverse-capi
 ```{r, fig.align="center", fig.width = 8, fig.height= 6}
 suppressPackageStartupMessages({
   library(dplyr)
-  library(readxl)
   library(tidygraph)
   library(ggraph)
-  library(dplyr)
   })
 
-filter <- read_excel("data/filter.xlsx")
+filter <- read.csv("https://raw.githubusercontent.com/mshin77/datasets/main/cybersecurity-workshop-data/filter.csv")
 
 graph_meta <- filter %>%
     as_tbl_graph(directed = TRUE) %>%
@@ -304,13 +299,12 @@ plot(network_meta_gg)
 
 ```{r, fig.align="center", fig.width = 8, fig.height= 6}
 suppressPackageStartupMessages({
-  library(readxl)
   library(dplyr)
   library(ggplot2)
   library(tidytext)
 })
 
-sentiment_20 <- read_excel("data/sentiment_20.xlsx")
+sentiment_20 <- read.csv("https://raw.githubusercontent.com/mshin77/datasets/main/cybersecurity-workshop-data/sentiment_20.csv")
 
 senti_plot <- sentiment_20 %>%
   mutate(word = reorder_within(word, n, sentiment)) %>%

@@ -582,67 +582,64 @@ Assistant Professor, Dept. of Education
 <div class="cell" data-layout-align="center">
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">suppressPackageStartupMessages</span>({</span>
 <span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">library</span>(dplyr)</span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">library</span>(readxl)</span>
-<span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">library</span>(tidygraph)</span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">library</span>(ggraph)</span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">library</span>(dplyr)</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  })</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">library</span>(tidygraph)</span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">library</span>(ggraph)</span>
+<span id="cb1-5"><a href="#cb1-5"></a>  })</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a>filter <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/mshin77/datasets/main/cybersecurity-workshop-data/filter.csv"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a>filter <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/filter.xlsx"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10"></a></span>
-<span id="cb1-11"><a href="#cb1-11"></a>graph_meta <span class="ot">&lt;-</span> filter <span class="sc">%&gt;%</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>    <span class="fu">as_tbl_graph</span>(<span class="at">directed =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a>    <span class="fu">mutate</span>(<span class="at">centrality =</span> <span class="fu">centrality_degree</span>(<span class="at">mode =</span> <span class="st">"out"</span>) <span class="sc">/</span> (<span class="dv">44-1</span>)) </span>
-<span id="cb1-14"><a href="#cb1-14"></a></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="fu">set.seed</span>(<span class="dv">2023</span>)</span>
-<span id="cb1-16"><a href="#cb1-16"></a>layout_meta <span class="ot">&lt;-</span> <span class="fu">create_layout</span>(graph_meta, <span class="at">layout =</span> <span class="st">'fr'</span>)</span>
-<span id="cb1-17"><a href="#cb1-17"></a></span>
-<span id="cb1-18"><a href="#cb1-18"></a>network_meta <span class="ot">&lt;-</span> layout_meta <span class="sc">%&gt;%</span> </span>
-<span id="cb1-19"><a href="#cb1-19"></a>  <span class="fu">ggraph</span>() <span class="sc">+</span> </span>
-<span id="cb1-20"><a href="#cb1-20"></a>  <span class="fu">geom_edge_link</span>(<span class="fu">aes</span>(<span class="at">edge_alpha =</span> correlation, <span class="at">edge_width =</span> correlation), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">edge_colour =</span> <span class="st">"skyblue"</span>) <span class="sc">+</span> </span>
-<span id="cb1-21"><a href="#cb1-21"></a>  <span class="fu">geom_node_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> centrality), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb1-22"><a href="#cb1-22"></a>  <span class="fu">geom_node_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">repel =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb1-23"><a href="#cb1-23"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">guide =</span> <span class="st">'legend'</span>, <span class="at">high =</span> <span class="st">"#fa956b"</span>, <span class="at">low =</span> <span class="st">"#ebc4b5"</span>) <span class="sc">+</span></span>
-<span id="cb1-24"><a href="#cb1-24"></a>  <span class="fu">theme_void</span>(<span class="at">base_size =</span> <span class="dv">6</span>) <span class="sc">+</span></span>
-<span id="cb1-25"><a href="#cb1-25"></a>  <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
-<span id="cb1-26"><a href="#cb1-26"></a>        <span class="at">legend.text=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
-<span id="cb1-27"><a href="#cb1-27"></a>        <span class="at">legend.position =</span> <span class="st">"right"</span>)</span>
-<span id="cb1-28"><a href="#cb1-28"></a></span>
-<span id="cb1-29"><a href="#cb1-29"></a>network_meta_g <span class="ot">&lt;-</span> <span class="fu">ggplot_build</span>(network_meta)</span>
-<span id="cb1-30"><a href="#cb1-30"></a>network_meta_g<span class="sc">$</span>data[[<span class="dv">3</span>]] <span class="ot">&lt;-</span> network_meta_g<span class="sc">$</span>data[[<span class="dv">3</span>]] <span class="sc">%&gt;%</span></span>
-<span id="cb1-31"><a href="#cb1-31"></a>  <span class="fu">mutate</span>(<span class="at">colour =</span> <span class="fu">if_else</span>(label <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Cybersecurity"</span>), <span class="st">"red"</span>, <span class="st">"black"</span>))</span>
-<span id="cb1-32"><a href="#cb1-32"></a>network_meta_gg <span class="ot">&lt;-</span> <span class="fu">ggplot_gtable</span>(network_meta_g)</span>
-<span id="cb1-33"><a href="#cb1-33"></a></span>
-<span id="cb1-34"><a href="#cb1-34"></a><span class="fu">plot</span>(network_meta_gg) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9"></a>graph_meta <span class="ot">&lt;-</span> filter <span class="sc">%&gt;%</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="fu">as_tbl_graph</span>(<span class="at">directed =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="fu">mutate</span>(<span class="at">centrality =</span> <span class="fu">centrality_degree</span>(<span class="at">mode =</span> <span class="st">"out"</span>) <span class="sc">/</span> (<span class="dv">44-1</span>)) </span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="fu">set.seed</span>(<span class="dv">2023</span>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a>layout_meta <span class="ot">&lt;-</span> <span class="fu">create_layout</span>(graph_meta, <span class="at">layout =</span> <span class="st">'fr'</span>)</span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a>network_meta <span class="ot">&lt;-</span> layout_meta <span class="sc">%&gt;%</span> </span>
+<span id="cb1-17"><a href="#cb1-17"></a>  <span class="fu">ggraph</span>() <span class="sc">+</span> </span>
+<span id="cb1-18"><a href="#cb1-18"></a>  <span class="fu">geom_edge_link</span>(<span class="fu">aes</span>(<span class="at">edge_alpha =</span> correlation, <span class="at">edge_width =</span> correlation), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">edge_colour =</span> <span class="st">"skyblue"</span>) <span class="sc">+</span> </span>
+<span id="cb1-19"><a href="#cb1-19"></a>  <span class="fu">geom_node_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> centrality), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>  <span class="fu">geom_node_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">repel =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">guide =</span> <span class="st">'legend'</span>, <span class="at">high =</span> <span class="st">"#fa956b"</span>, <span class="at">low =</span> <span class="st">"#ebc4b5"</span>) <span class="sc">+</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a>  <span class="fu">theme_void</span>(<span class="at">base_size =</span> <span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a>  <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="cb1-24"><a href="#cb1-24"></a>        <span class="at">legend.text=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="cb1-25"><a href="#cb1-25"></a>        <span class="at">legend.position =</span> <span class="st">"right"</span>)</span>
+<span id="cb1-26"><a href="#cb1-26"></a></span>
+<span id="cb1-27"><a href="#cb1-27"></a>network_meta_g <span class="ot">&lt;-</span> <span class="fu">ggplot_build</span>(network_meta)</span>
+<span id="cb1-28"><a href="#cb1-28"></a>network_meta_g<span class="sc">$</span>data[[<span class="dv">3</span>]] <span class="ot">&lt;-</span> network_meta_g<span class="sc">$</span>data[[<span class="dv">3</span>]] <span class="sc">%&gt;%</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a>  <span class="fu">mutate</span>(<span class="at">colour =</span> <span class="fu">if_else</span>(label <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Cybersecurity"</span>), <span class="st">"red"</span>, <span class="st">"black"</span>))</span>
+<span id="cb1-30"><a href="#cb1-30"></a>network_meta_gg <span class="ot">&lt;-</span> <span class="fu">ggplot_gtable</span>(network_meta_g)</span>
+<span id="cb1-31"><a href="#cb1-31"></a></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="fu">plot</span>(network_meta_gg) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" class="r-stretch quarto-figure-center"></section><section class="slide level2"><h3>Positive and Negative Words (“Disability” + “Cybersecurity”)</h3>
 <div class="cell" data-layout-align="center">
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">suppressPackageStartupMessages</span>({</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">library</span>(readxl)</span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">library</span>(dplyr)</span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-5"><a href="#cb2-5"></a>  <span class="fu">library</span>(tidytext)</span>
-<span id="cb2-6"><a href="#cb2-6"></a>})</span>
-<span id="cb2-7"><a href="#cb2-7"></a></span>
-<span id="cb2-8"><a href="#cb2-8"></a>sentiment_20 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/sentiment_20.xlsx"</span>)</span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a>senti_plot <span class="ot">&lt;-</span> sentiment_20 <span class="sc">%&gt;%</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">reorder_within</span>(word, n, sentiment)) <span class="sc">%&gt;%</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> word, <span class="at">y =</span> n, <span class="at">fill =</span> sentiment)) <span class="sc">+</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.3</span>) <span class="sc">+</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> sentiment, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a>  <span class="fu">scale_x_reordered</span>() <span class="sc">+</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.15</span>))) <span class="sc">+</span>  </span>
-<span id="cb2-19"><a href="#cb2-19"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a>  <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
-<span id="cb2-22"><a href="#cb2-22"></a>        <span class="at">legend.text=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
-<span id="cb2-23"><a href="#cb2-23"></a>        <span class="at">legend.position =</span> <span class="st">"right"</span>)</span>
-<span id="cb2-24"><a href="#cb2-24"></a></span>
-<span id="cb2-25"><a href="#cb2-25"></a>senti_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">library</span>(dplyr)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">library</span>(tidytext)</span>
+<span id="cb2-5"><a href="#cb2-5"></a>})</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a>sentiment_20 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/mshin77/datasets/main/cybersecurity-workshop-data/sentiment_20.csv"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a>senti_plot <span class="ot">&lt;-</span> sentiment_20 <span class="sc">%&gt;%</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">reorder_within</span>(word, n, sentiment)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> word, <span class="at">y =</span> n, <span class="at">fill =</span> sentiment)) <span class="sc">+</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> sentiment, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a>  <span class="fu">scale_x_reordered</span>() <span class="sc">+</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.15</span>))) <span class="sc">+</span>  </span>
+<span id="cb2-18"><a href="#cb2-18"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a>  <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="cb2-21"><a href="#cb2-21"></a>        <span class="at">legend.text=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="cb2-22"><a href="#cb2-22"></a>        <span class="at">legend.position =</span> <span class="st">"right"</span>)</span>
+<span id="cb2-23"><a href="#cb2-23"></a></span>
+<span id="cb2-24"><a href="#cb2-24"></a>senti_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="768" class="r-stretch quarto-figure-center"></section><section class="slide level2"><h2>Conclusion</h2>
