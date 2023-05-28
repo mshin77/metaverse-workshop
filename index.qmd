@@ -44,7 +44,9 @@ execute:
 <h4>`r fontawesome::fa("twitter", "#233150")`   [\@mshin_77](https://twitter.com/mshin_77)     `r fontawesome::fa("home", "#233150")`   [mshin77.net](https://mshin77.net)</h4>
 
 ::: footer
+
 PERFECT-Basic, May 31, 2023
+
 :::
 
 ------------------------------------------------------------------------
@@ -53,12 +55,12 @@ PERFECT-Basic, May 31, 2023
 
 ::: columns
 ::: {.column width="70%"}
--   단일대상 실험설계 연구의 특성 <br>
--   왜 종단 자료인가? <br>
--   다층 종단 자료 구조 및 코딩 <br>
--   대상자간 중다기초선 설계 그래프 <br>
--   3수준 및 2수준 다층 모형 <br>
--   논의 및 추후 연구에 대한 시사점
+-   Metaverse vs Cybersecurity Trends <br>
+-   What is Metaverse? <br>
+-   History of Metaverse <br>
+-   Technologies Used in the Metaverse <br>
+-   Cybersecurity Issues in the Metaverse <br>
+-   News Article Analysis
 :::
 :::
 
@@ -72,16 +74,9 @@ Source: [Office of Elementary & Secondary Education](https://oese.ed.gov/resourc
 
 ## `Metaverse vs Cybersecurity Trends`
 
-![Source: <https://trends.google.com/trends>](figures/trend.png)
+![](figures/trend.png)
+Source: [Google Trend](https://trends.google.com/trends/explore?date=all&q=metaverse,cybersecurity&hl=en)
 
-## `Breakdown by Region`
-
-```{=html}
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3349_RC01/embed_loader.js"></script>
-```
-```{=html}
-<script type="text/javascript"> trends.embed.renderExploreWidget("GEO_MAP", {"comparisonItem":[{"keyword":"metaverse","geo":"","time":"2004-01-01 2023-05-25"},{"keyword":"cybersecurity","geo":"","time":"2004-01-01 2023-05-25"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=metaverse,cybersecurity&hl=en-US","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
-```
 ## `What is Metaverse?`
 
 ::: columns
@@ -286,10 +281,10 @@ layout_meta <- create_layout(graph_meta, layout = 'fr')
 
 network_meta <- layout_meta %>% 
   ggraph() + 
-  geom_edge_link(aes(edge_alpha = correlation, edge_width = correlation), alpha = 0.1, edge_colour = "blue") + 
-  geom_node_point(aes(colour = centrality), size = 6) +
+  geom_edge_link(aes(edge_alpha = correlation, edge_width = correlation), alpha = 0.5, edge_colour = "skyblue") + 
+  geom_node_point(aes(colour = centrality), size = 3) +
   geom_node_text(aes(label = name), size = 4, repel = TRUE) +
-  scale_color_continuous(guide = 'legend', high = "#50e63e", low = "#e6fce3") +
+  scale_color_continuous(guide = 'legend', high = "#fa956b", low = "#ebc4b5") +
   theme_void(base_size = 6) +
   theme(legend.title=element_text(size = 11),
         legend.text=element_text(size = 11),

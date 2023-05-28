@@ -416,26 +416,25 @@ Assistant Professor, Dept. of Education
 <div class="columns">
 <div class="column" style="width:70%;">
 <ul>
-<li>단일대상 실험설계 연구의 특성 <br>
+<li>Metaverse vs Cybersecurity Trends <br>
 </li>
-<li>왜 종단 자료인가? <br>
+<li>What is Metaverse? <br>
 </li>
-<li>다층 종단 자료 구조 및 코딩 <br>
+<li>History of Metaverse <br>
 </li>
-<li>대상자간 중다기초선 설계 그래프 <br>
+<li>Technologies Used in the Metaverse <br>
 </li>
-<li>3수준 및 2수준 다층 모형 <br>
+<li>Cybersecurity Issues in the Metaverse <br>
 </li>
-<li>논의 및 추후 연구에 대한 시사점</li>
+<li>News Article Analysis</li>
 </ul>
 </div>
 </div>
 </section><section class="slide level2">
 <img data-src="figures/DOE.png" class="r-stretch quarto-figure-center"><p>Source: <a href="https://oese.ed.gov/resources/safe-school-environments/keeping-students-safe-online/">Office of Elementary &amp; Secondary Education</a></p>
 </section><section class="slide level2"><h2><code>Metaverse vs Cybersecurity Trends</code></h2>
-
-<img data-src="figures/trend.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://trends.google.com/trends" class="uri">https://trends.google.com/trends</a></p></section><section class="slide level2"><h2><code>Breakdown by Region</code></h2>
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3349_RC01/embed_loader.js"></script><script type="text/javascript"> trends.embed.renderExploreWidget("GEO_MAP", {"comparisonItem":[{"keyword":"metaverse","geo":"","time":"2004-01-01 2023-05-25"},{"keyword":"cybersecurity","geo":"","time":"2004-01-01 2023-05-25"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=metaverse,cybersecurity&hl=en-US","guestPath":"https://trends.google.com:443/trends/embed/"}); </script></section><section class="slide level2"><h2><code>What is Metaverse?</code></h2>
+<p><img data-src="figures/trend.png"> Source: <a href="https://trends.google.com/trends/explore?date=all&amp;q=metaverse,cybersecurity&amp;hl=en">Google Trend</a></p>
+</section><section class="slide level2"><h2><code>What is Metaverse?</code></h2>
 <div class="columns">
 <div class="column" style="width:60%;">
 <ul>
@@ -600,10 +599,10 @@ Assistant Professor, Dept. of Education
 <span id="cb1-17"><a href="#cb1-17"></a></span>
 <span id="cb1-18"><a href="#cb1-18"></a>network_meta <span class="ot">&lt;-</span> layout_meta <span class="sc">%&gt;%</span> </span>
 <span id="cb1-19"><a href="#cb1-19"></a>  <span class="fu">ggraph</span>() <span class="sc">+</span> </span>
-<span id="cb1-20"><a href="#cb1-20"></a>  <span class="fu">geom_edge_link</span>(<span class="fu">aes</span>(<span class="at">edge_alpha =</span> correlation, <span class="at">edge_width =</span> correlation), <span class="at">alpha =</span> <span class="fl">0.1</span>, <span class="at">edge_colour =</span> <span class="st">"blue"</span>) <span class="sc">+</span> </span>
-<span id="cb1-21"><a href="#cb1-21"></a>  <span class="fu">geom_node_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> centrality), <span class="at">size =</span> <span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>  <span class="fu">geom_edge_link</span>(<span class="fu">aes</span>(<span class="at">edge_alpha =</span> correlation, <span class="at">edge_width =</span> correlation), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">edge_colour =</span> <span class="st">"skyblue"</span>) <span class="sc">+</span> </span>
+<span id="cb1-21"><a href="#cb1-21"></a>  <span class="fu">geom_node_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> centrality), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
 <span id="cb1-22"><a href="#cb1-22"></a>  <span class="fu">geom_node_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">repel =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb1-23"><a href="#cb1-23"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">guide =</span> <span class="st">'legend'</span>, <span class="at">high =</span> <span class="st">"#50e63e"</span>, <span class="at">low =</span> <span class="st">"#e6fce3"</span>) <span class="sc">+</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">guide =</span> <span class="st">'legend'</span>, <span class="at">high =</span> <span class="st">"#fa956b"</span>, <span class="at">low =</span> <span class="st">"#ebc4b5"</span>) <span class="sc">+</span></span>
 <span id="cb1-24"><a href="#cb1-24"></a>  <span class="fu">theme_void</span>(<span class="at">base_size =</span> <span class="dv">6</span>) <span class="sc">+</span></span>
 <span id="cb1-25"><a href="#cb1-25"></a>  <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
 <span id="cb1-26"><a href="#cb1-26"></a>        <span class="at">legend.text=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
