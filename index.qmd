@@ -1,0 +1,348 @@
+---
+format: 
+  revealjs:
+    theme: ["theme/ppt-theme.scss"]
+    transition: slide
+    transition-speed: fast
+    slide-number: c/t
+    logo: ""
+    code-copy: true
+    center-title-slide: false
+    chalkboard: 
+      buttons: true
+    code-fold: true
+    code-overflow: scroll
+    code-link: true
+    highlight-style: a11y
+    touch: true
+    controls: true
+    hash-type: number
+    hash-one-based-index: true
+    slide-tone: false
+linestretch: 1.5
+width: 1024 
+height: 768
+execute: 
+  eval: true
+  echo: true
+---
+
+<br> <br>
+
+<h1>`Metaverse and Cybersecurity`</h1>
+
+<h3>Keep Every Student Safe Online</h3>
+
+<br>
+
+<h3>Mikyung Shin, PhD</h3>
+
+<h3>West Texas A&M University</h3>
+
+<h3>Assistant Professor, Dept. of Education</h3>
+
+<h4>`r fontawesome::fa("twitter", "#233150")`   [\@mshin_77](https://twitter.com/mshin_77)     `r fontawesome::fa("home", "#233150")`   [mshin77.net](https://mshin77.net)</h4>
+
+::: footer
+PERFECT-Basic, May 31, 2023
+:::
+
+------------------------------------------------------------------------
+
+## `Agenda`
+
+::: columns
+::: {.column width="70%"}
+-   단일대상 실험설계 연구의 특성 <br>
+-   왜 종단 자료인가? <br>
+-   다층 종단 자료 구조 및 코딩 <br>
+-   대상자간 중다기초선 설계 그래프 <br>
+-   3수준 및 2수준 다층 모형 <br>
+-   논의 및 추후 연구에 대한 시사점
+:::
+:::
+
+------------------------------------------------------------------------
+
+![](figures/DOE.png){fig-align="center"}
+
+Source: [Office of Elementary & Secondary Education](https://oese.ed.gov/resources/safe-school-environments/keeping-students-safe-online/)
+
+------------------------------------------------------------------------
+
+## `Metaverse vs Cybersecurity Trends`
+
+![Source: <https://trends.google.com/trends>](figures/trend.png)
+
+## `Breakdown by Region`
+
+```{=html}
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3349_RC01/embed_loader.js"></script>
+```
+```{=html}
+<script type="text/javascript"> trends.embed.renderExploreWidget("GEO_MAP", {"comparisonItem":[{"keyword":"metaverse","geo":"","time":"2004-01-01 2023-05-25"},{"keyword":"cybersecurity","geo":"","time":"2004-01-01 2023-05-25"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=metaverse,cybersecurity&hl=en-US","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+```
+## `What is Metaverse?`
+
+::: columns
+::: {.column width="60%"}
+-   Meta (Beyond) + Verse (Universe)
+-   A network of 3D virtual worlds which are connected.
+-   Provide opportunities to connect and communicate with others.
+-   Feel like everyone is physically present with others while engaging in virtual experiences
+-   Digitally represent ourselves through an avartar (who we are, who we want to be)
+-   Establish interoperability (allow individuals to take things with them as they move around in the virtual spaces)
+:::
+
+::: {.column width="40%" fig-align="center"}
+![](https://www.techrepublic.com/wp-content/uploads/2023/01/learn-about-metaverse-bundle.jpg){width="341"}
+
+Source: [TechRepublic](https://www.techrepublic.com/article/learn-about-metaverse-bundle/)
+:::
+:::
+
+## `History of Metaverse`
+
+![](https://i0.wp.com/metaversetroop.com/wp-content/uploads/2022/03/HISTORY-OF-THE-METAVERSE-timeline.webp?resize=1024%252C576&ssl=1){fig-align="center" width="713"}
+
+Source: [Ziaul (March, 2022)](https://metaversetroop.com/history-of-the-metaverse/)
+
+-   Web 1.0, Web 2.0, Web 3.0
+-   Metaverse Standards <https://metaverse-standards.org/>
+
+## `Technologies Used in the Metaverse`
+
+![](https://www.mdpi.com/electronics/electronics-12-00391/article_deploy/html/images/electronics-12-00391-g001.png){fig-align="center"}
+
+Source: [Gupta et al. (2023)](https://www.mdpi.com/2079-9292/12/2/391)
+
+------------------------------------------------------------------------
+
+### Augmented Reality (AR)
+
+-   Combine physical and digital worlds
+
+-   [Overlay on the physical learning environment]{style="background-color: #FFB7B2"}
+
+-   Adapt to the circumstances where it is found
+
+-   Interact with the physical elements found around in three dimensions
+
+-   Example: Face Filter App, QR code, Google Translate, and Google Maps
+
+![](https://www.geogebra.org/resource/yxjmgzza/cNKSOBwgH2oK4bDI/material-yxjmgzza.png){fig-align="center"}
+
+Source: [GeoGebra](https://www.geogebra.org/m/agpb7bq7)
+
+------------------------------------------------------------------------
+
+### Virtual Reality (VR)
+
+-   Use technology to create a [fully simulated environment]{style="background-color: #FFB7B2"}
+-   Fully immersed with the use of headset
+-   Entire experiences are controlled by devices (e.g., head mounted display)
+-   Without AR or VR hardware: [CoSpaces](https://www.cospaces.io/edu/), [ThingLink](https://www.thinglink.com/), [Avantis World](https://www.avantisworld.com/), [Roblox](#0) and [Minecraft](#0)
+
+![](https://builtin.com/cdn-cgi/image/f=auto,quality=80,width=752,height=435/https://builtin.com/sites/www.builtin.com/files/styles/byline_image/public/2021-12/ar-virtual-reality-healthcare.png){fig-align="center"}
+
+Source: [https://builtin.com](https://builtin.com/healthcare-technology/ar-virtual-reality-healthcare)
+
+------------------------------------------------------------------------
+
+### Mixed Reality (MR)
+
+-   [Blend elements of both AR and VR]{style="background-color: #FFB7B2"}
+-   Provide a mixture of digital and real-world environments
+-   Use gestures to move digital content around on a virtual whiteboard
+-   Interactive with holographic objects
+-   Example: [Immersive learning](https://about.fb.com/news/2023/04/how-the-metaverse-can-transform-education/)
+
+![](https://s.yimg.com/uu/api/res/1.2/P0DAkErGA8cfeFOXlFZu3Q--~B/aD04NDQ7dz0yMDAwO2FwcGlkPXl0YWNoeW9u/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2021-03/71010d20-7b70-11eb-afd3-d255736698de.cf.webp){fig-align="center"}
+
+Source: [Microsoft Mesh](https://www.engadget.com/microsoft-mesh-holograms-hololens-ar-vr-164001796.html)
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="50%"}
+### Artificial Intelligence (AI)
+
+-   Used extensively in face and speech recognition, **virtual assistance** (chatbots)
+
+-   **Multilingual accessibility** (translate content in real time) in the global environment
+
+-   [Ready Player Me](https://readyplayer.me) for a customized **avatar**
+
+    ![](figures/ready-player-me.png){fig-align="center" width="512"}
+:::
+
+::: {.column width="50%"}
+### Game Engines
+
+-   **Unreal** & **Unity3D**
+-   [Unity 3D Engine](https://unity.com/solutions/game): [Expo Dubai Xplorer](https://virtualexpodubai.com/listen-watch/events/expo-dubai-xplorer-app) and [Hydrous](https://thehydro.us/)
+-   [Unreal Engine](https://www.unrealengine.com/en-US/): Kid-friendly metaverse by Epic Games and Lego team
+
+![](https://static-prod.adweek.com/wp-content/uploads/2022/11/epic-games-lego-child-safety-2-2022.jpg.webp){fig-align="center"}
+
+Source: [Lepitak (November, 2022)](https://www.adweek.com/brand-marketing/how-lego-and-epic-games-aim-to-make-online-experiences-safe-for-children/)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Blockchain, NFT, and Digital Wallet
+
+-   **Blockchain**: Technology that securely stores electronic information and provides proof of ownership
+-   **NFT**: Nonfungible tokens; unique digital assets representing real-world object/asset (e.g., photos, music)
+-   **Digital wallet**: Tool to securely save payment information (digital currency, \[encrypted\] cryptocurrency)
+
+![](https://about.fb.com/wp-content/uploads/2022/08/01_Cross-Posting-Digital-Collectibles-on-Facebook-and-Instagram.jpg?resize=890%252C593){fig-align="center"}
+
+Source: [Meta](https://about.fb.com/news/2022/05/introducing-digital-collectibles-to-showcase-nfts-instagram/)
+
+------------------------------------------------------------------------
+
+### Online Classes in South Korea as a Responding to COVID
+
+![](https://blogs.iadb.org/educacion/wp-content/uploads/sites/22/2020/08/grafico-korea.png){fig-align="center"}
+
+### Phased Online-Learning 
+
+![](https://blogs.iadb.org/educacion/wp-content/uploads/sites/22/2020/08/tabla.png){fig-align="center"}
+
+Source: Ministry of Education, Republic of Korea
+
+------------------------------------------------------------------------
+
+### Metaverse Case: "South Korea launches online metaverse replica of capital city Seoul to improve public services"
+
+-   South Korean people and major companies (e.g., GS shop, home shopping) have integrated the metaverse into their everyday lives.
+
+-   City government promotes the **metaverse ecosystem** and **ethical principles**
+
+![](https://forkast.news/wp-content/uploads/2023/01/meta-seoul-768x576.png){fig-align="center"}
+
+Source: [Forkast News](https://forkast.news/headlines/south-korea-metaverse-capital-city-seoul/)
+
+## `Cybersecurity Issues in the Metaverse`
+
+-   **Naver News:** South Korean online platform operated by the Naver Corporation and launched in 1998 (news service, 2000-present, available open news search, 1990-present)
+
+-   **Big KINDS**: Integrated database for most major newspapers published in South Korea 1990-present
+
+![](figures/naver.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+### Text Mining of Naver News
+
+-   Search term: 메타버스 (Metaverse)
+-   Web scrapping using R (Naver API is available)
+-   Sentiment analysis and word network
+-   10,677 after removing duplicates (in Jan. to Apr. 2023)
+-   9,525 news after removing news less than 500 characters (n = 1,152
+-   min character = 500, max character = 1,3634 per news
+
+![](figures/process.png){fig-align="center" width="429"}
+
+------------------------------------------------------------------------
+
+### Pre-Process and Tokenize Texts (News Articles)
+
+-   R version 4.3.0
+
+-   Among **at least 30 occurrences** within each news
+
+-   **At least .12 of correlations** with "Cybersecurity"
+
+-   library(tidytext): `unnest_tokens(`) to transform text data into a "tidy" format
+
+-   library(KoNLP): `SimplePos09()` to tokenize each into morphemes (the smallest meaningful unit)
+
+-   library(widyr): `pairwise_cor()` to find correlations of words associated with "Cybersecurity"
+
+------------------------------------------------------------------------
+
+### Word Network Analysis ("Cybersecurity")
+
+```{r, fig.align="center", fig.width = 8, fig.height= 6}
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(readxl)
+  library(tidygraph)
+  library(ggraph)
+  library(dplyr)
+  })
+
+filter <- read_excel("data/filter.xlsx")
+
+graph_meta <- filter %>%
+    as_tbl_graph(directed = TRUE) %>%
+    mutate(centrality = centrality_degree(mode = "out") / (44-1)) 
+
+set.seed(2023)
+layout_meta <- create_layout(graph_meta, layout = 'fr')
+
+network_meta <- layout_meta %>% 
+  ggraph() + 
+  geom_edge_link(aes(edge_alpha = correlation, edge_width = correlation), alpha = 0.1, edge_colour = "blue") + 
+  geom_node_point(aes(colour = centrality), size = 6) +
+  geom_node_text(aes(label = name), size = 4, repel = TRUE) +
+  scale_color_continuous(guide = 'legend', high = "#50e63e", low = "#e6fce3") +
+  theme_void(base_size = 6) +
+  theme(legend.title=element_text(size = 11),
+        legend.text=element_text(size = 11),
+        legend.position = "right")
+
+network_meta_g <- ggplot_build(network_meta)
+network_meta_g$data[[3]] <- network_meta_g$data[[3]] %>%
+  mutate(colour = if_else(label %in% c("Cybersecurity"), "red", "black"))
+network_meta_gg <- ggplot_gtable(network_meta_g)
+
+plot(network_meta_gg) 
+```
+
+------------------------------------------------------------------------
+
+### Positive and Negative Words ("Disability" + "Cybersecurity")
+
+```{r, fig.align="center", fig.width = 8, fig.height= 6}
+suppressPackageStartupMessages({
+  library(readxl)
+  library(dplyr)
+  library(ggplot2)
+  library(tidytext)
+})
+
+sentiment_20 <- read_excel("data/sentiment_20.xlsx")
+
+senti_plot <- sentiment_20 %>%
+  mutate(word = reorder_within(word, n, sentiment)) %>%
+  ggplot(aes(x = word, y = n, fill = sentiment)) +
+  geom_col() +
+  coord_flip() +
+  geom_text(aes(label = n), hjust = -0.3) +
+  facet_wrap(~ sentiment, scales = "free") +
+  scale_x_reordered() +
+  scale_y_continuous(expand = expansion(mult = c(0.05, 0.15))) +  
+  labs(x = NULL) +
+  theme_bw(base_size = 14) +
+  theme(legend.title=element_text(size = 11),
+        legend.text=element_text(size = 11),
+        legend.position = "right")
+
+senti_plot
+```
+
+------------------------------------------------------------------------
+
+## Conclusion
+
+-   Advanced technological environments and technology (e.g., metaverse) can support learners' motivation and learning opportunities in various settings.
+
+-   Increased online and virtual opportunities and communications can also create new and unexpected security issues.
+
+-   We need to be proactive in utilizing and creating data and information.
+
+-   We need to consider limited access and resources for underrepresented groups.
