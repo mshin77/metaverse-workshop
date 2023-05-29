@@ -72,21 +72,7 @@ Source: [Office of Elementary & Secondary Education](https://oese.ed.gov/resourc
 
 ## `Metaverse vs Cybersecurity Trends`
 
-### Worldwide
-
-![](figures/trend-world.png) Source: [Google Trend](https://trends.google.com/trends/explore?date=all&q=metaverse,cybersecurity&hl=en)
-
-------------------------------------------------------------------------
-
-### USA
-
-![](figures/trend-usa.png)
-
-------------------------------------------------------------------------
-
-### South Korea
-
-![](figures/trend-south-korea.png)
+![](figures/trend.png) Source: [Google Trend](https://trends.google.com/trends/explore?date=all&q=metaverse,cybersecurity&hl=en)
 
 ------------------------------------------------------------------------
 
