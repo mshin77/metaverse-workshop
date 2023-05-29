@@ -84,7 +84,7 @@ Source: [Office of Elementary & Secondary Education](https://oese.ed.gov/resourc
 -   A network of 3D virtual worlds which are connected.
 -   Provide opportunities to connect and communicate with others.
 -   Feel like everyone is physically present with others while engaging in virtual experiences
--   Digitally represent ourselves through an avartar (who we are, who we want to be)
+-   Digitally represent ourselves through an avatar (who we are, who we want to be)
 -   Establish interoperability (allow individuals to take things with them as they move around in the virtual spaces)
 :::
 
