@@ -586,7 +586,7 @@ Assistant Professor, Dept. of Education
 <span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">library</span>(ggraph)</span>
 <span id="cb1-5"><a href="#cb1-5"></a>  })</span>
 <span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a>filter <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/mshin77/datasets/main/cybersecurity-workshop-data/filter.csv"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a>filter <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/mshin77/datasets/main/cybersecurity-workshop/filter.csv"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8"></a></span>
 <span id="cb1-9"><a href="#cb1-9"></a>graph_meta <span class="ot">&lt;-</span> filter <span class="sc">%&gt;%</span></span>
 <span id="cb1-10"><a href="#cb1-10"></a>    <span class="fu">as_tbl_graph</span>(<span class="at">directed =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
@@ -622,7 +622,7 @@ Assistant Professor, Dept. of Education
 <span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">library</span>(tidytext)</span>
 <span id="cb2-5"><a href="#cb2-5"></a>})</span>
 <span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a>sentiment_20 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/mshin77/datasets/main/cybersecurity-workshop-data/sentiment_20.csv"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a>sentiment_20 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/mshin77/datasets/main/cybersecurity-workshop/sentiment_20.csv"</span>)</span>
 <span id="cb2-8"><a href="#cb2-8"></a></span>
 <span id="cb2-9"><a href="#cb2-9"></a>senti_plot <span class="ot">&lt;-</span> sentiment_20 <span class="sc">%&gt;%</span></span>
 <span id="cb2-10"><a href="#cb2-10"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">reorder_within</span>(word, n, sentiment)) <span class="sc">%&gt;%</span></span>
@@ -644,7 +644,7 @@ Assistant Professor, Dept. of Education
 </div>
 <img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="768" class="r-stretch quarto-figure-center"></section><section class="slide level2"><h2>Conclusion</h2>
 <ul>
-<li><p>Advanced technological environments and technology (e.g., metaverse) can support learners’ motivation and learning opportunities in various settings.</p></li>
+<li><p>Advanced technology and its environments (e.g., metaverse) can support learners’ motivation and learning opportunities in various settings.</p></li>
 <li><p>Increased online and virtual opportunities and communications can also create new and unexpected security issues.</p></li>
 <li><p>We need to be proactive in utilizing and creating data and information.</p></li>
 <li><p>We need to consider limited access and resources for underrepresented groups.</p></li>
