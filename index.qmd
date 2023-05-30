@@ -64,15 +64,13 @@ PERFECT-Basic, May 31, 2023
 
 ------------------------------------------------------------------------
 
-![](figures/DOE.png){fig-align="center"}
-
-Source: [Office of Elementary & Secondary Education](https://oese.ed.gov/resources/safe-school-environments/keeping-students-safe-online/)
+![](figures/DOE.png){fig-align="center"}[Source:]{style="font-size: 0.65em"} [Office of Elementary & Secondary Education](https://oese.ed.gov/resources/safe-school-environments/keeping-students-safe-online/){style="font-size: 0.65em"}
 
 ------------------------------------------------------------------------
 
 ## `Metaverse vs Cybersecurity Trends`
 
-![](figures/trend.png) Source: [Google Trend](https://trends.google.com/trends/explore?date=all&q=metaverse,cybersecurity&hl=en)
+![](figures/trend.png)[Source:]{style="font-size: 0.65em"} [Google Trend](https://trends.google.com/trends/explore?date=all&q=metaverse,cybersecurity&hl=en){style="font-size: 0.65em"}
 
 ------------------------------------------------------------------------
 
@@ -89,25 +87,23 @@ Source: [Office of Elementary & Secondary Education](https://oese.ed.gov/resourc
 :::
 
 ::: {.column width="40%" fig-align="center"}
-![](https://www.techrepublic.com/wp-content/uploads/2023/01/learn-about-metaverse-bundle.jpg){width="341"}
-
-Source: [TechRepublic](https://www.techrepublic.com/article/learn-about-metaverse-bundle/)
+![](https://www.techrepublic.com/wp-content/uploads/2023/01/learn-about-metaverse-bundle.jpg){width="341"} [Source:]{style="font-size: 0.65em"} [TechRepublic](https://www.techrepublic.com/article/learn-about-metaverse-bundle/){style="font-size: 0.65em"}
 :::
 :::
 
 ## `History of the Metaverse`
 
-![](figures/history.png){fig-align="center" width="767"}
+![](figures/history.png){fig-align="center" width="767"} 
 
-Source: [Ziaul (March, 2022)](https://metaversetroop.com/history-of-the-metaverse/)
+[Source:]{style="font-size: 0.65em"} [Ziaul (March, 2022)](https://metaversetroop.com/history-of-the-metaverse/){style="font-size: 0.65em"}
 
--   Web 3.0, Metaverse Standards <https://metaverse-standards.org/>
+[Web 3.0, Metaverse Standards]{fig-align="center" width="767"}  <https://metaverse-standards.org/>{fig-align="center" width="767"} 
 
 ## `Technologies Used in the Metaverse`
 
-![](https://www.mdpi.com/electronics/electronics-12-00391/article_deploy/html/images/electronics-12-00391-g001.png){fig-align="center"}
+![](https://www.mdpi.com/electronics/electronics-12-00391/article_deploy/html/images/electronics-12-00391-g001.png){fig-align="center" width="620"}
 
-Source: [Gupta et al. (2023)](https://www.mdpi.com/2079-9292/12/2/391)
+[Source:]{style="font-size: 0.65em"} [Gupta et al. (2023)](https://www.mdpi.com/2079-9292/12/2/391){style="font-size: 0.65em"}
 
 ------------------------------------------------------------------------
 
@@ -125,7 +121,7 @@ Source: [Gupta et al. (2023)](https://www.mdpi.com/2079-9292/12/2/391)
 
 ![](https://www.geogebra.org/resource/yxjmgzza/cNKSOBwgH2oK4bDI/material-yxjmgzza.png){fig-align="center"}
 
-Source: [GeoGebra](https://www.geogebra.org/m/agpb7bq7)
+[Source:]{style="font-size: 0.65em"} [GeoGebra](https://www.geogebra.org/m/agpb7bq7){style="font-size: 0.65em"}
 
 ------------------------------------------------------------------------
 
@@ -138,7 +134,7 @@ Source: [GeoGebra](https://www.geogebra.org/m/agpb7bq7)
 
 ![](https://builtin.com/cdn-cgi/image/f=auto,quality=80,width=752,height=435/https://builtin.com/sites/www.builtin.com/files/styles/byline_image/public/2021-12/ar-virtual-reality-healthcare.png){fig-align="center"}
 
-Source: [https://builtin.com](https://builtin.com/healthcare-technology/ar-virtual-reality-healthcare)
+[Source:]{style="font-size: 0.65em"} [https://builtin.com](https://builtin.com/healthcare-technology/ar-virtual-reality-healthcare){style="font-size: 0.65em"}
 
 ------------------------------------------------------------------------
 
@@ -152,7 +148,7 @@ Source: [https://builtin.com](https://builtin.com/healthcare-technology/ar-virtu
 
 ![](https://s.yimg.com/uu/api/res/1.2/P0DAkErGA8cfeFOXlFZu3Q--~B/aD04NDQ7dz0yMDAwO2FwcGlkPXl0YWNoeW9u/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2021-03/71010d20-7b70-11eb-afd3-d255736698de.cf.webp){fig-align="center"}
 
-Source: [Microsoft Mesh](https://www.engadget.com/microsoft-mesh-holograms-hololens-ar-vr-164001796.html)
+[Source:]{style="font-size: 0.65em"} [Microsoft Mesh](https://www.engadget.com/microsoft-mesh-holograms-hololens-ar-vr-164001796.html){style="font-size: 0.65em"}
 
 ------------------------------------------------------------------------
 
@@ -176,9 +172,7 @@ Source: [Microsoft Mesh](https://www.engadget.com/microsoft-mesh-holograms-holol
 -   [Unity 3D Engine](https://unity.com/solutions/game): [Expo Dubai Xplorer](https://virtualexpodubai.com/listen-watch/events/expo-dubai-xplorer-app) and [Hydrous](https://thehydro.us/)
 -   [Unreal Engine](https://www.unrealengine.com/en-US/): Kid-friendly metaverse by Epic Games and Lego team
 
-![](https://static-prod.adweek.com/wp-content/uploads/2022/11/epic-games-lego-child-safety-2-2022.jpg.webp){fig-align="center"}
-
-Source: [Lepitak (November, 2022)](https://www.adweek.com/brand-marketing/how-lego-and-epic-games-aim-to-make-online-experiences-safe-for-children/)
+![](https://static-prod.adweek.com/wp-content/uploads/2022/11/epic-games-lego-child-safety-2-2022.jpg.webp){fig-align="center"} [Source:]{style="font-size: 0.65em"} [Lepitak (November, 2022)](https://www.adweek.com/brand-marketing/how-lego-and-epic-games-aim-to-make-online-experiences-safe-for-children/){style="font-size: 0.65em"}
 :::
 :::
 
@@ -192,15 +186,13 @@ Source: [Lepitak (November, 2022)](https://www.adweek.com/brand-marketing/how-le
 
 ![](https://about.fb.com/wp-content/uploads/2022/08/01_Cross-Posting-Digital-Collectibles-on-Facebook-and-Instagram.jpg?resize=890%252C593){fig-align="center"}
 
-Source: [Meta](https://about.fb.com/news/2022/05/introducing-digital-collectibles-to-showcase-nfts-instagram/)
+[Source:]{style="font-size: 0.65em"} [Meta](https://about.fb.com/news/2022/05/introducing-digital-collectibles-to-showcase-nfts-instagram/){style="font-size: 0.65em"}
 
 ------------------------------------------------------------------------
 
 ## South Korea's Innovation Toward the Metaverse
 
-![](figures/trend-south-korea.png)
-
-Source: [Google Trend](https://trends.google.com/trends/explore?date=all&geo=KR&q=metaverse,cybersecurity&hl=en)
+![](figures/trend-south-korea.png) [Source:]{style="font-size: 0.65em"} [Google Trend](https://trends.google.com/trends/explore?date=all&geo=KR&q=metaverse,cybersecurity&hl=en){style="font-size: 0.65em"}
 
 ------------------------------------------------------------------------
 
@@ -212,7 +204,7 @@ Source: [Google Trend](https://trends.google.com/trends/explore?date=all&geo=KR&
 
 ![](https://blogs.iadb.org/educacion/wp-content/uploads/sites/22/2020/08/tabla.png){fig-align="center"}
 
-Source: Ministry of Education, Republic of Korea
+[Source:]{style="font-size: 0.65em"} [Ministry of Education, Republic of Korea]{style="font-size: 0.65em"}
 
 ------------------------------------------------------------------------
 
@@ -224,7 +216,7 @@ Source: Ministry of Education, Republic of Korea
 
 ![](https://forkast.news/wp-content/uploads/2023/01/meta-seoul-768x576.png){fig-align="center"}
 
-Source: [Forkast News](https://forkast.news/headlines/south-korea-metaverse-capital-city-seoul/)
+[Source:]{style="font-size: 0.65em"} [Forkast News](https://forkast.news/headlines/south-korea-metaverse-capital-city-seoul/){style="font-size: 0.65em"}
 
 ------------------------------------------------------------------------
 
