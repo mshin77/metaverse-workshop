@@ -97,9 +97,9 @@ Source: [TechRepublic](https://www.techrepublic.com/article/learn-about-metavers
 
 ## `History of Metaverse`
 
-![](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%253A%252F%252Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%252Fpublic%252Fimages%252F238747a7-6957-4b39-a484-1e1e18ddde08_2102x1494.png){fig-align="center"}
+![](figures/history.png){fig-align="center"}
 
-Source: [McKinsey & Company (2022)](https://www.mademethink.xyz/p/metaverse-web3-reports)
+Source: [Ziaul (March, 2022)](https://metaversetroop.com/history-of-the-metaverse/)
 
 -   Web 1.0, Web 2.0, Web 3.0
 -   Metaverse Standards <https://metaverse-standards.org/>
