@@ -95,7 +95,7 @@ Source: [TechRepublic](https://www.techrepublic.com/article/learn-about-metavers
 :::
 :::
 
-## `History of Metaverse`
+## `History of the Metaverse`
 
 ![](figures/history.png){fig-align="center" width="767"}
 
