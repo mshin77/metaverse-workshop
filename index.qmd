@@ -95,14 +95,13 @@ Source: [TechRepublic](https://www.techrepublic.com/article/learn-about-metavers
 :::
 :::
 
-## `History of Metaverse`
+------------------------------------------------------------------------
 
-![](https://i0.wp.com/metaversetroop.com/wp-content/uploads/2022/03/HISTORY-OF-THE-METAVERSE-timeline.webp?resize=1024%252C576&ssl=1){fig-align="center" width="713"}
+![](https://images.cnbctv18.com/wp-content/uploads/2022/01/History-Of-Metaverse-Revised.png){fig-align="center"}
 
-Source: [Ziaul (March, 2022)](https://metaversetroop.com/history-of-the-metaverse/)
+Source: [cnbctv18.com](https://www.cnbctv18.com/technology/explained-the-history-of-metaverse-12015212.htm)
 
--   Web 1.0, Web 2.0, Web 3.0
--   Metaverse Standards <https://metaverse-standards.org/>
+------------------------------------------------------------------------
 
 ## `Technologies Used in the Metaverse`
 
