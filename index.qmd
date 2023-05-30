@@ -200,6 +200,8 @@ Source: [Meta](https://about.fb.com/news/2022/05/introducing-digital-collectible
 
 ![](figures/trend-south-korea.png)
 
+Source: [Google Trend](https://trends.google.com/trends/explore?date=all&geo=KR&q=metaverse,cybersecurity&hl=en)
+
 ------------------------------------------------------------------------
 
 ### Online Classes in South Korea as a Responding to COVID
