@@ -97,12 +97,11 @@ Source: [TechRepublic](https://www.techrepublic.com/article/learn-about-metavers
 
 ## `History of Metaverse`
 
-![](figures/history.png){fig-align="center"}
+![](figures/history.png){fig-align="center" width="767"}
 
 Source: [Ziaul (March, 2022)](https://metaversetroop.com/history-of-the-metaverse/)
 
--   Web 1.0, Web 2.0, Web 3.0
--   Metaverse Standards <https://metaverse-standards.org/>
+-   Web 3.0, Metaverse Standards <https://metaverse-standards.org/>
 
 ## `Technologies Used in the Metaverse`
 
