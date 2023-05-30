@@ -196,6 +196,12 @@ Source: [Meta](https://about.fb.com/news/2022/05/introducing-digital-collectible
 
 ------------------------------------------------------------------------
 
+## South Korea's Innovation Toward the Metaverse
+
+![](figures/trend-south-korea.png)
+
+------------------------------------------------------------------------
+
 ### Online Classes in South Korea as a Responding to COVID
 
 ![](https://blogs.iadb.org/educacion/wp-content/uploads/sites/22/2020/08/grafico-korea.png){fig-align="center"}
