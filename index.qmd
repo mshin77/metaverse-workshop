@@ -52,13 +52,19 @@ PERFECT-Basic, May 31, 2023
 ## `Agenda`
 
 ::: columns
-::: {.column width="70%"}
+::: {.column width="75%"}
 -   Metaverse vs Cybersecurity Trends <br>
 -   What is Metaverse? <br>
 -   History of Metaverse <br>
 -   Technologies Used in the Metaverse <br>
 -   Cybersecurity Issues in the Metaverse <br>
 -   News Article Analysis
+:::
+
+::: {.column width="25%"}
+Recorded Video:
+
+![](figures/qr.png){width="217"}
 :::
 :::
 
@@ -93,11 +99,11 @@ PERFECT-Basic, May 31, 2023
 
 ## `History of the Metaverse`
 
-![](figures/history.png){fig-align="center" width="767"} 
+![](figures/history.png){fig-align="center" width="767"}
 
 [Source:]{style="font-size: 0.65em"} [Ziaul (March, 2022)](https://metaversetroop.com/history-of-the-metaverse/){style="font-size: 0.65em"}
 
-[Web 3.0, Metaverse Standards]{fig-align="center" width="767"}  <https://metaverse-standards.org/>{fig-align="center" width="767"} 
+[Web 3.0, Metaverse Standards]{fig-align="center" width="767"} [https://metaverse-standards.org/](https://metaverse-standards.org/){fig-align="center" width="767"}
 
 ## `Technologies Used in the Metaverse`
 
